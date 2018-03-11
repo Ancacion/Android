@@ -5,4 +5,5 @@
     <string name="age">年齡</string>
     <string name="inputage">(輸入年齡)</string>
     <string name="ok">確定</string>
+    <string name="txtR">建議:</string>
 </resources>

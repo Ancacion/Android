@@ -60,13 +60,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0"
-            android:elegantTextHeight="false"
-            android:elevation="0dp"
+            android:elegantTextHeight="true"
+            android:elevation="15dp"
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/ok"
             android:visibility="visible"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="214dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:text="@string/txtR" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
