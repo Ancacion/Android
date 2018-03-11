@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             int Age = Integer.parseInt(minputage.getText().toString());
 
             String strSug = getString(R.string.txtR);
-            if (strSex.equals(getString(R.string.sex_male)))
+            if (strSex.equals(getString(R.string.sex_male)) || strSex.equals(getString(R.string.male)))
                 if(Age < 30)
                     strSug += getString(R.string.sug_not_hurry);
                  else if(Age >= 30 && Age <= 35)
