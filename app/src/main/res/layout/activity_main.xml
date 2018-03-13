@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/inputsex"
+            android:hint="@string/inputsex"
             android:visibility="visible"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="47dp" />
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/inputage"
+            android:hint="@string/inputage"
             android:visibility="visible"
             tools:layout_editor_absoluteX="16dp"
             tools:layout_editor_absoluteY="145dp" />
