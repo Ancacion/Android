@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 if(Age < 30)
                     strSug += getString(R.string.sug_not_hurry);
                  else if(Age >= 30 && Age <= 35)
-                     strSug += getString(R.string.sug_get_married);
+                    strSug += "get marry";
                  else
                     strSug += getString(R.string.sug_find_couple);
             else
