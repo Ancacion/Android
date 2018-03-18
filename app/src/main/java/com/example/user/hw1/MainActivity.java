@@ -35,14 +35,14 @@ public class MainActivity extends AppCompatActivity {
             int Age = Integer.parseInt(minputage.getText().toString());
 
             String strSug = getString(R.string.txtR);
-            if (strSex.equals(getString(R.string.sex_male)) || strSex.equals(getString(R.string.male)))
+            if (strSex.equals(getString(R.string.sex_male)))
                 if(Age < 30)
                     strSug += getString(R.string.sug_not_hurry);
                  else if(Age >= 30 && Age <= 35)
                     strSug += getString(R.string.sug_get_married);
                  else
                     strSug += getString(R.string.sug_find_couple);
-            else
+            else if(strSex.equals(getString(R.string.sex_female)))
                 if(Age < 28)
                     strSug += getString(R.string.sug_not_hurry);
                 else if(Age >= 28 && Age <= 32 )
