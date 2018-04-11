@@ -18,7 +18,6 @@ public class Artificial_intelligence {
     public String whoWin(int UserPlay) {
         this.AiPlay = (int)(Math.random()*3 + 1);
         String winner;
-        // 1 – 剪刀, 2 – 石頭, 3 – 布.
         if ((UserPlay == 1 && AiPlay == 3)||(UserPlay == 2 && AiPlay == 1)||(UserPlay == 3 && AiPlay == 2)) {
             winner = "恭喜，你贏了！";
         }
