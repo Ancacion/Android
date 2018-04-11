@@ -30,27 +30,27 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener btnScissorsOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             Artificial_intelligence ms = new Artificial_intelligence();
-            String winner = ms.whoWin(1);
+            String match = ms.whoWin(1);
             mTxtComPlay.setText(ms.getComputerChoice());
-            mTxtResult.setText(getString(R.string.result) + winner);
+            mTxtResult.setText(getString(R.string.result) + match);
         }
     };
 
     private View.OnClickListener btnStoneOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             Artificial_intelligence ms = new Artificial_intelligence();
-            String winner = ms.whoWin(2);
+            String match = ms.whoWin(2);
             mTxtComPlay.setText(ms.getComputerChoice());
-            mTxtResult.setText(getString(R.string.result) + winner);
+            mTxtResult.setText(getString(R.string.result) + match);
         }
     };
 
     private View.OnClickListener btnPaperOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             Artificial_intelligence ms = new Artificial_intelligence();
-            String winner = ms.whoWin(3);
+            String match = ms.whoWin(3);
             mTxtComPlay.setText(ms.getComputerChoice());
-            mTxtResult.setText(getString(R.string.result) + winner);
+            mTxtResult.setText(getString(R.string.result) + match);
         }
     };
 }
