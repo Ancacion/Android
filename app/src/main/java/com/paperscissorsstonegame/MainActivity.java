@@ -30,72 +30,33 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener btnScissorsOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             // 決定電腦出拳.
-            int iComPlay = (int)(Math.random()*3 + 1);
+            AI ms = new AI();
 
-            // 1 – 剪刀, 2 – 石頭, 3 – 布.
-            if (iComPlay == 1) {
-                mTxtComPlay.setText(R.string.play_scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
-            }
-            else if (iComPlay == 2) {
-                mTxtComPlay.setText(R.string.play_stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-            }
-            else {
-                mTxtComPlay.setText(R.string.play_paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
-            }
+            String winner = ms.whoWin(1);
+            mTxtComPlay.setText(ms.getComputerChoice());
+            mTxtResult.setText(getString(R.string.result) + winner);
         }
     };
 
     private View.OnClickListener btnStoneOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             // 決定電腦出拳.
-            int iComPlay = (int)(Math.random()*3 + 1);
+            AI ms = new AI();
 
-            // 1 – 剪刀, 2 – 石頭, 3 – 布.
-            if (iComPlay == 1) {
-                mTxtComPlay.setText(R.string.play_scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
-            }
-            else if (iComPlay == 2) {
-                mTxtComPlay.setText(R.string.play_stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
-            }
-            else {
-                mTxtComPlay.setText(R.string.play_paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-            }
+            String winner = ms.whoWin(2);
+            mTxtComPlay.setText(ms.getComputerChoice());
+            mTxtResult.setText(getString(R.string.result) + winner);
         }
     };
 
     private View.OnClickListener btnPaperOnClick = new View.OnClickListener() {
         public void onClick(View v) {
             // 決定電腦出拳.
-            int iComPlay = (int)(Math.random()*3 + 1);
+            AI ms = new AI();
 
-            // 1 – 剪刀, 2 – 石頭, 3 – 布.
-            if (iComPlay == 1) {
-                mTxtComPlay.setText(R.string.play_scissors);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_lose));
-            }
-            else if (iComPlay == 2) {
-                mTxtComPlay.setText(R.string.play_stone);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_win));
-            }
-            else {
-                mTxtComPlay.setText(R.string.play_paper);
-                mTxtResult.setText(getString(R.string.result) +
-                        getString(R.string.player_draw));
-            }
+            String winner = ms.whoWin(3);
+            mTxtComPlay.setText(ms.getComputerChoice());
+            mTxtResult.setText(getString(R.string.result) + winner);
         }
     };
 }
