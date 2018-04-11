@@ -4,36 +4,32 @@ import org.junit.After;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-
-/**
- * Created by user on 2018/4/11.
- */
-
 public class AITest {
     private   Artificial_intelligence ms;
 
     @After
-    public void tearDown() { ms= null;
+    public void tearDown() {
+        ms= null;
     }
 
     @Test
     public void PlayerWin() {
         String result = "";
-        while (!result.equals("恭喜，你贏了！")) {
+        while (!result.equals("你贏了！")) {
             ms = new Artificial_intelligence();
             result = ms.whoWin(1);
         }
-        assertEquals("恭喜，你贏了！", result);
+        assertEquals("你贏了！", result);
     }
 
     @Test
     public void ComputerWin() {
         String result = "";
-        while (!result.equals("很可惜，你輸了！")) {
+        while (!result.equals("你輸了！")) {
             ms = new Artificial_intelligence();
             result = ms.whoWin(2);
         }
-        assertEquals("很可惜，你輸了！", result);
+        assertEquals("你輸了！", result);
     }
 
     @Test
