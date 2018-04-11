@@ -15,21 +15,21 @@ public class AITest {
     @Test
     public void PlayerWin() {
         String result = "";
-        while (!result.equals("你贏了！")) {
+        while (!result.equals("恭喜，你贏了！")) {
             ms = new Artificial_intelligence();
             result = ms.whoWin(1);
         }
-        assertEquals("你贏了！", result);
+        assertEquals("恭喜，你贏了！", result);
     }
 
     @Test
     public void ComputerWin() {
         String result = "";
-        while (!result.equals("你輸了！")) {
+        while (!result.equals("很可惜，你輸了！")) {
             ms = new Artificial_intelligence();
             result = ms.whoWin(2);
         }
-        assertEquals("你輸了！", result);
+        assertEquals("很可惜，你輸了！", result);
     }
 
     @Test
