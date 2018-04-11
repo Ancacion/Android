@@ -29,9 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener btnScissorsOnClick = new View.OnClickListener() {
         public void onClick(View v) {
-            // 決定電腦出拳.
-            AI ms = new AI();
-
+            Artificial_intelligence ms = new Artificial_intelligence();
             String winner = ms.whoWin(1);
             mTxtComPlay.setText(ms.getComputerChoice());
             mTxtResult.setText(getString(R.string.result) + winner);
@@ -40,9 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener btnStoneOnClick = new View.OnClickListener() {
         public void onClick(View v) {
-            // 決定電腦出拳.
-            AI ms = new AI();
-
+            Artificial_intelligence ms = new Artificial_intelligence();
             String winner = ms.whoWin(2);
             mTxtComPlay.setText(ms.getComputerChoice());
             mTxtResult.setText(getString(R.string.result) + winner);
@@ -51,9 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener btnPaperOnClick = new View.OnClickListener() {
         public void onClick(View v) {
-            // 決定電腦出拳.
-            AI ms = new AI();
-
+            Artificial_intelligence ms = new Artificial_intelligence();
             String winner = ms.whoWin(3);
             mTxtComPlay.setText(ms.getComputerChoice());
             mTxtResult.setText(getString(R.string.result) + winner);
