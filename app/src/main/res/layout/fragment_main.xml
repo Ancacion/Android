@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt_title"
+        android:textSize="40sp"
+        android:textColor="#FF00FF"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp" />
+
+    <Button
+        android:id="@+id/btnShowResult"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/btnDrawDie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_show_result1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/txtTitle"
+        android:layout_centerHorizontal="true"
+        android:text="@string/prompt_subtitle"
+        android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/imgvDie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/txtSubtitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/dice01" />
+
+    <Button
+        android:id="@+id/btnDrawDie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_below="@+id/imgvDie"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/draw_die"
+        android:textSize="20dp" />
+
+</RelativeLayout>
