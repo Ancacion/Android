@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private StringBuilder stringBuilder;
     private Formatter formatter;
     private ArrayList<String> dataList;
+    private DatePicker dataPicker;
     private int number;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
