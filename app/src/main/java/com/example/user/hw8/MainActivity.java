@@ -23,7 +23,8 @@ public class MainActivity extends AppCompatActivity {
     private StringBuilder stringBuilder;
     private Formatter formatter;
     private ArrayList<String> dataList;
-    private DatePicker datePicker;
+    private DatePicker date;
+    private CalendarView cal;
     private int number;
 
     @Override
@@ -31,12 +32,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        spinner = findViewById(R.id.spinner);
-        editDate = findViewById(R.id.editDate);
+        spinner = (Spinner)findViewById(R.id.spinner);
+        editDate = (EditText) findViewById(R.id.editDate);
         editDate.setEnabled(false);
-        editCost = findViewById(R.id.editCost);
-        ((DatePicker) findViewById(R.id.dpkdatePicker)).setOnDateChangedListener(dpkDatePicker_OnDateChanged);
-        ((CalendarView) findViewById(R.id.calendarView)).setOnDateChangeListener(cldCalendar_OnDateChanged);
+        editCost = (EditText) findViewById(R.id.editCost);
+
+        date = (DatePicker) findViewById(R.id.dpkdatePicker);
+        date.setOnDateChangedListener(DatePicker_OnDateChanged);
+
+        cal = (CalendarView) findViewById(R.id.calendarView);
+        cal.setOnDateChangeListener(Calendar_OnDateChanged);
+
         findViewById(R.id.inputButton).setOnClickListener(inputButton_OnClick);
         findViewById(R.id.recordButton).setOnClickListener(recordButton_OnClick);
 
@@ -46,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         number = 0;
     }
 
-    private final DatePicker.OnDateChangedListener dpkDatePicker_OnDateChanged = new DatePicker.OnDateChangedListener() {
+    private final DatePicker.OnDateChangedListener DatePicker_OnDateChanged = new DatePicker.OnDateChangedListener() {
         @Override
         public void onDateChanged(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
             //@Override
@@ -55,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    private final CalendarView.OnDateChangeListener cldCalendar_OnDateChanged = new CalendarView.OnDateChangeListener() {
+    private final CalendarView.OnDateChangeListener Calendar_OnDateChanged = new CalendarView.OnDateChangeListener() {
         @Override
         public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
             //@Override
@@ -69,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             String itemName = spinner.getSelectedItem().toString();
             String date = editDate.getText().toString();
             String cost = editCost.getText().toString();
+
             stringBuilder.delete(0, stringBuilder.length());
             formatter.format("項目%d  %10s  %10s  %10s", number++, date, itemName, cost);
             dataList.add(stringBuilder.toString());
