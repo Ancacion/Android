@@ -1,4 +1,4 @@
-package com.example.alan.homework8;
+package com.example.andy.homework8;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

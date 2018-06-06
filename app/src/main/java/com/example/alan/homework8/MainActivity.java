@@ -1,4 +1,4 @@
-package com.example.alan.homework8;
+package com.example.andy.homework8;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;

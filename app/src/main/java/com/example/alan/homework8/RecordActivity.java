@@ -1,4 +1,4 @@
-package com.example.alan.homework8;
+package com.example.andy.homework8;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
