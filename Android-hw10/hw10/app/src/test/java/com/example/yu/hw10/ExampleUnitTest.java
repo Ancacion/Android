@@ -1,4 +1,4 @@
-package com.example.yu.hw10;
+package com.example.user.hw10;
 
 import org.junit.Test;
 
